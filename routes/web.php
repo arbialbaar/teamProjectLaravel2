@@ -14,5 +14,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view ('compro.home');
+}); 
+
+Route::get('/home', function () {
+    return view ('compro.home');
+}); 
+
+Route::get('/about', function () {
+    return view ('compro.about');
+}); 
+
+Route::get('/daftar', function () {
+    return view ('compro.create');
+}); 
