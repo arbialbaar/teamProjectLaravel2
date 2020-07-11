@@ -15,16 +15,22 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view ('compro.home');
-}); 
-
+});
 Route::get('/home', function () {
     return view ('compro.home');
-}); 
-
+});
 Route::get('/about', function () {
     return view ('compro.about');
-}); 
+});
+Route::get('/join', function () {
+    return view ('compro.join');
+});
 
-Route::get('/daftar', function () {
-    return view ('compro.create');
-}); 
+Route::get('/members', 'MemberController@index')->name('members.index');
+Route::get('/members/create', 'MemberController@create')->name('members.create');
+Route::post('/members', 'MemberController@store')->name('members.store');
+Route::get('/members/{member}', 'MemberController@show')->name('members.show');
+Route::get('/members/{member}/edit', 'MemberController@edit')->name('members.edit');
+Route::patch('/members/{member}', 'MemberController@update')->name('members.update');
+Route::delete('/members/{member}', 'MemberController@destroy')->name('members.destroy');
+
