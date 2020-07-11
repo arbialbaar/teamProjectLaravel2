@@ -19,6 +19,7 @@ class CreateStatusesTable extends Migration
             $table->string('bagian');
             $table->string('pekerjaan');
             $table->timestamps();
+            $table->foreign('member_id')->references('id')->on('members')->onDelete('cascade')->onUpdate('cascade');
         });
     }
 
