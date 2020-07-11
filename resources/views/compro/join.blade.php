@@ -31,7 +31,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @forelse ($members as $item)
+                    @forelse ($data as $item)
                         <tr>
                             <td>{{ $loop->iteration }}</td>
                             <td><a href="{{ route('members.show', ['member' => $item->id]) }}">{{ $item->nama }}</a></td>

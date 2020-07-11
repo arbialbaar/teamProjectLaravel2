@@ -14,7 +14,7 @@
                 @csrf
                 <button type="submit" class="btn btn-danger" onclick="return confirm('Are You Sure?')">Hapus</button>
                 </form>
-                <a href="{{ route('members.join') }}" class="btn btn-success">Back</a>
+                <a href="{{ route('members.create') }}" class="btn btn-success">Back</a>
             </div>
             <hr>
             @if (session()->has('pesan'))

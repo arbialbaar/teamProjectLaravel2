@@ -22,9 +22,7 @@ Route::get('/home', function () {
 Route::get('/about', function () {
     return view ('compro.about');
 });
-Route::get('/join', function () {
-    return view ('compro.join');
-});
+
 
 Route::get('/members', 'MemberController@index')->name('members.index');
 Route::get('/members/create', 'MemberController@create')->name('members.create');

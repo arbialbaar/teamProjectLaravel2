@@ -24,7 +24,7 @@
               <a class="nav-link @yield('menuHome')" href="/home" id="hai">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link @yield('menuDaftar')" href="/join" id="hai">Join Us</a>
+              <a class="nav-link @yield('menuDaftar')" href="/members" id="hai">Join Us</a>
             </li>
             <li class="nav-item">
               <a class="nav-link @yield('menuAbout')" href="/about" id="hai">About</a>

@@ -15,8 +15,8 @@ class MemberController extends Controller
      */
     public function index()
     {
-        $members = Member::all();
-        return view('compro.join', compact('members'));
+        $data = Member::all();
+        return view('compro.join', compact('data'));
     }
 
     /**
@@ -107,6 +107,6 @@ class MemberController extends Controller
     public function destroy(Member $member)
     {
         $member->delete();
-        return redirect()->route('members.join')->with('pesan', "Hapus Data Variabel $member->nama Berhasil");
+        return redirect()->route('members.index')->with('pesan', "Hapus Data Variabel $member->nama Berhasil");
     }
 }
